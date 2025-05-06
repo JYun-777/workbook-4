@@ -1,0 +1,46 @@
+To Do App
+
+What things(objects) exist in todo app?
+Task Priority
+Task
+ToDo list
+Calendar
+History
+Alarms
+Subject Categories
+
+What behaviors should a note or task support?
+
+How would you group similar notes or tasks?
+
+Do you need to store or load notes?
+
+What interface will the user see?
+
+Based on your answers, describe at least 3–5 Java classes you would create. For each class, specify:
+Class name
+-Key attributes (fields)
+-Key actions (methods)
+-Use this example format:
+Class: Note
+Fields: title, content, createdDate
+Methods: edit(), delete(), display()
+
+
+Class: Task
+Fields: Bool complete, String name, String description, LocalDate DueDate, String Priority
+Methods: complete(), display()
+
+Class: TodoList
+Fields: Arraylist tasks, String name, Float progress
+Methods: search(filter), sort(), addItem(), removeItem(), display()
+
+Class: Note
+Fields: int id <String> links (TodoList|Task), LocalDate Created, LocalDate LastEditedDate, 
+Methods: addLink
+
+Class: Links
+Fields: 
+
+Class: NoteList
+Fields: 
