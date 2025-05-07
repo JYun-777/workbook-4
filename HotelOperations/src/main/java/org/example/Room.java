@@ -11,12 +11,17 @@ public class Room {
     private Boolean isDirty = false;
 
     public void checkIn(){
-        this.isOccupied = true;
-        this.isAvailable = false;
+        if (this.isAvailable && !this.isOccupied && !this.isDirty){
+            //this.guestName();
+            this.isOccupied = true;
+            this.isAvailable = false;
+        }
     }
 
     public void checkOut(){
-        isDirty = true;
+        this.isOccupied = false;
+        this.isAvailable = true;
+        this.isDirty = true;
     }
 
     public void sendRequest(){
@@ -24,7 +29,7 @@ public class Room {
     }
 
     public void cleanRoom(){
-
+        this.isDirty = false;
     }
 
     public int getRoomNumber() {
