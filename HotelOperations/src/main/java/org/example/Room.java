@@ -10,11 +10,13 @@ public class Room {
     private Boolean isAvailable = true;
     private Boolean isDirty = false;
 
-    public void checkIn(){
+    public void checkIn(String _guestName){
         if (this.isAvailable && !this.isOccupied && !this.isDirty){
-            //this.guestName();
+            this.guestName = _guestName;
             this.isOccupied = true;
             this.isAvailable = false;
+        } else{
+            System.out.println("Room is not available.");
         }
     }
 
@@ -29,7 +31,9 @@ public class Room {
     }
 
     public void cleanRoom(){
-        this.isDirty = false;
+        if(!this.getOccupied()) {
+            this.isDirty = false;
+        }else System.out.println("Room is currently Occupied.");
     }
 
     public int getRoomNumber() {

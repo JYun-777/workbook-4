@@ -46,6 +46,20 @@ class EmployeeTest {
         testEmployee.punchIn(5.5);
         //assert
         assertTrue(testEmployee.getPunchedIn());
-        assertEquals()
+        assertEquals(5.5,testEmployee.getPunchInTime());
+    }
+
+    @Test
+    public void punchOut_shouldAddToTotalHours(){
+        //arrange
+        Employee testEmployee = new Employee();
+        testEmployee.setHoursWorked(5.0);
+        testEmployee.punchIn(3.0);
+        double expectedFinalHoursWorked = 9.0;
+        //act
+        testEmployee.punchOut(7.0);
+        //assert
+        assertTrue(testEmployee.getPunchedIn());
+        assertEquals(expectedFinalHoursWorked, testEmployee.getHoursWorked());
     }
 }

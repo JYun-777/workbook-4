@@ -91,4 +91,11 @@ public class Employee {
         return roundedDoubleTime;
     }
 
+    public double getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(double _hoursWorked) {
+        this.hoursWorked = _hoursWorked;
+    }
 }
